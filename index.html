@@ -244,7 +244,7 @@
 
     <div class="inputs-row">
       <div class="field">
-        <label>CPC ($)</label>
+        <label>CPC (€)</label>
         <input type="number" id="cpc" value="0.19" step="0.01" min="0"/>
         <div class="hint">Cost per click</div>
       </div>
@@ -259,7 +259,7 @@
         <div class="hint">Conversion rate</div>
       </div>
       <div class="field">
-        <label>Offer Price ($)</label>
+        <label>Offer Price (€)</label>
         <input type="number" id="price" value="71" step="1" min="0"/>
         <div class="hint">Revenue per sale</div>
       </div>
@@ -324,7 +324,7 @@
 
     <div class="target-row">
       <div class="field slider-field">
-        <label>Target CPA ($)</label>
+        <label>Target CPA (€)</label>
         <input type="number" id="target_cpa" value="50" step="1" min="1"/>
         <input type="range" id="target_cpa_slider" min="1" max="500" value="50"/>
         <div class="hint">Ziel-Cost-per-Acquisition</div>
@@ -385,7 +385,7 @@
   function fmt(n, digits=2) {
     return n.toLocaleString('de-DE', { minimumFractionDigits: digits, maximumFractionDigits: digits });
   }
-  function fmtUSD(n) { return '$' + fmt(Math.abs(n)); }
+  function fmtUSD(n) { return fmt(Math.abs(n)) + ' €'; }
 
   function calc() {
     const cpc    = inputs.cpc();
